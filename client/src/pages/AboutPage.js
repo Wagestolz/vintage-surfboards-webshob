@@ -1,9 +1,31 @@
 import styled from "styled-components";
-// import { PageHero } from "../components";
-// import aboutImg from "../assets/hero-bcg.jpeg";
+import { PageHero } from "../components";
 
 const AboutPage = () => {
-    return <h4>about page</h4>;
+    return (
+        <main>
+            <PageHero title="about" />
+            <Wrapper className="page section section-center">
+                <img src="./about.jpg" alt="evolution of surfboards" />
+                <article>
+                    <div className="title">
+                        <h2>our story</h2>
+                        <div className="underline"></div>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Totam fugit quas suscipit quo libero, iusto odit eum
+                        quia blanditiis? Harum neque, dolore maxime fuga eos
+                        quas amet facere ut? Quis incidunt deserunt modi
+                        provident repudiandae iusto voluptas aut minus nisi quos
+                        voluptatum quod alias, dolor vitae eius esse perferendis
+                        molestias quia! Quos dolorem animi quae esse
+                        perferendis, expedita provident iste.
+                    </p>
+                </article>
+            </Wrapper>
+        </main>
+    );
 };
 
 const Wrapper = styled.section`
@@ -19,9 +41,9 @@ const Wrapper = styled.section`
     p {
         line-height: 2;
         max-width: 45em;
-        margin: 0 auto;
+        margin: auto 0;
         margin-top: 2rem;
-        color: var(--clr-grey-5);
+        color: var(--clr-primary-4);
     }
     .title {
         text-align: left;

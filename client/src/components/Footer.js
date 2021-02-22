@@ -1,6 +1,14 @@
 import styled from "styled-components";
 const Footer = () => {
-    return <h4>footer</h4>;
+    return (
+        <Wrapper>
+            <h5>
+                &copy; {new Date().getFullYear()}
+                <span> Vintage Surfboards</span>
+            </h5>
+            <h5>All rights reserved</h5>
+        </Wrapper>
+    );
 };
 
 const Wrapper = styled.footer`
@@ -9,15 +17,15 @@ const Wrapper = styled.footer`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--clr-black);
+    background: var(--hawaii-yellow);
     text-align: center;
     span {
-        color: var(--clr-primary-5);
+        color: var(--hawaii-red);
     }
     h5 {
-        color: var(--clr-white);
+        color: var(--hawaii-creme);
         margin: 0.1rem;
-        font-weight: 400;
+        font-weight: 600;
         text-transform: none;
         line-height: 1.25;
     }
