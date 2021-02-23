@@ -22,12 +22,8 @@ const Hero = () => {
                 </Link>
             </article>
             <article className="img-container">
-                <img src="./about.jpg" alt="surfboards" className="main-img" />
-                <img
-                    src="./about.jpg"
-                    alt="surfboards"
-                    className="accent-img"
-                />
+                <img src="./hero2.jpg" alt="surfboards" className="main-img" />
+                <img src="./hero.jpg" alt="surfboards" className="accent-img" />
             </article>
         </Wrapper>
     );

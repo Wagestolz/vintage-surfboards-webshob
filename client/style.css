@@ -18,15 +18,16 @@ Variables
     /*  HAWAIIAN COILOR SCHEME */
     --hawaii-red: #fd5c5a;
     --hawaii-red-bright: #ff4643;
+    --clr-primary-4: #936a53;
     --hawaii-yellow: #fecb75;
     --hawaii-creme: #fcf5e2;
+    --hawaii-darkcreme: #eae5d7;
     --hawaii-lightblue: #8bdada;
     --hawaii-darkblue: #4cc2c0;
 
     --clr-primary-1: hsl(22, 28%, 21%);
     --clr-primary-2: hsl(22, 28%, 29%);
     --clr-primary-3: hsl(22, 28%, 37%);
-    --clr-primary-4: hsl(22, 28%, 45%);
     /* primary/main color */
     --clr-primary-5: hsl(22, 31%, 52%);
     /* lighter shades of primary color */
