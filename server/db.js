@@ -9,3 +9,7 @@ module.exports.addSubscriber = (email) => {
         email,
     ]);
 };
+
+module.exports.getProducts = () => {
+    return db.query(`SELECT * FROM products`);
+};

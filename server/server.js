@@ -36,6 +36,16 @@ app.post("/subscribe", (req, res) => {
     }
 });
 
+app.get("/getproducts", (req, res) => {
+    db.getProducts()
+        .then(({ rows }) => {
+            res.json(rows);
+        })
+        .catch((err) => {
+            console.log("error in db.getProducts: ", err);
+        });
+});
+
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "..", "client", "index.html"));
 });
