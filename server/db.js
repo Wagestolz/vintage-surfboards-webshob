@@ -13,3 +13,12 @@ module.exports.addSubscriber = (email) => {
 module.exports.getProducts = () => {
     return db.query(`SELECT id, fields FROM products`);
 };
+
+module.exports.getSingleProduct = (id) => {
+    return db.query(
+        `SELECT id, fields 
+        FROM products
+        WHERE id = $1`,
+        [id]
+    );
+};

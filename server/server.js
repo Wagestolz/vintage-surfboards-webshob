@@ -46,6 +46,17 @@ app.get("/getproducts", (req, res) => {
         });
 });
 
+app.get(`/getproduct/:id`, (req, res) => {
+    const { id } = req.params;
+    db.getSingleProduct(id)
+        .then(({ rows }) => {
+            res.json(rows);
+        })
+        .catch((err) => {
+            console.log("error in db.getSingleProduct: ", err);
+        });
+});
+
 app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "..", "client", "index.html"));
 });

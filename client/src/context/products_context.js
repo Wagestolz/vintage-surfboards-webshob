@@ -18,6 +18,9 @@ const initialState = {
     products_error: false,
     products: [],
     featured_products: [],
+    single_product_loading: false,
+    single_product_error: false,
+    single_product: [],
 };
 
 const ProductsContext = React.createContext();
@@ -31,12 +34,25 @@ export const ProductsProvider = ({ children }) => {
         dispatch({ type: SIDEBAR_CLOSE });
     };
 
+    const getSingleProduct = (id) => {
+        dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
+        axios
+            .get(`/getproduct/${id}`)
+            .then(({ data }) => {
+                console.log("data single Product: ", data);
+                dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: data });
+            })
+            .catch((err) => {
+                dispatch({ type: GET_SINGLE_PRODUCT_ERROR, payload: err });
+            });
+    };
+
     useEffect(() => {
         dispatch({ type: GET_PRODUCTS_BEGIN });
         axios
             .get("/getproducts")
             .then(({ data }) => {
-                console.log("data: ", data);
+                console.log("data all products: ", data);
                 dispatch({ type: GET_PRODUCTS_SUCCESS, payload: data });
             })
             .catch((err) => {
@@ -46,7 +62,7 @@ export const ProductsProvider = ({ children }) => {
 
     return (
         <ProductsContext.Provider
-            value={{ ...state, openSidebar, closeSidebar }}
+            value={{ ...state, openSidebar, closeSidebar, getSingleProduct }}
         >
             {children}
         </ProductsContext.Provider>
