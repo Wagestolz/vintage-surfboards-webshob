@@ -11,5 +11,5 @@ module.exports.addSubscriber = (email) => {
 };
 
 module.exports.getProducts = () => {
-    return db.query(`SELECT * FROM products`);
+    return db.query(`SELECT id, fields FROM products`);
 };
