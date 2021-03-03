@@ -39,8 +39,11 @@ export const ProductsProvider = ({ children }) => {
         axios
             .get(`/getproduct/${id}`)
             .then(({ data }) => {
-                console.log("data single Product: ", data);
-                dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: data });
+                // console.log("data single Product: ", data);
+                dispatch({
+                    type: GET_SINGLE_PRODUCT_SUCCESS,
+                    payload: data[0],
+                });
             })
             .catch((err) => {
                 dispatch({ type: GET_SINGLE_PRODUCT_ERROR, payload: err });

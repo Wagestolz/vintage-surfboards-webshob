@@ -5,9 +5,9 @@ import { formatPrice } from "../utils/helpers";
 import {
     Loading,
     Error,
-    // ProductImages,
-    // AddToCart,
-    // Stars,
+    ProductImages,
+    AddToCart,
+    Stars,
     PageHero,
 } from "../components";
 import styled from "styled-components";
@@ -34,13 +34,65 @@ const SingleProductPage = () => {
     //     }
     // }, [error]);
 
+    // const { id: asin } = product;
+    // const {
+    //     name,
+    //     price,
+    //     description,
+    //     stock,
+    //     stars,
+    //     reviews,
+    //     brand,
+    //     images,
+    // } = product.fields;
+
     if (loading) {
         return <Loading />;
     }
     if (error) {
         return <Error />;
     }
-    return <h4>single product page</h4>;
+    if (product.fields) {
+        return (
+            <Wrapper>
+                <PageHero title={product.fields.name} product />
+                <div className="section section-center page">
+                    <Link to="/products" className="btn">
+                        back to products
+                    </Link>
+                    <div className="product-center">
+                        <ProductImages images={product.fields.image} />
+                        <section className="content">
+                            <h2>{product.fields.name}</h2>
+                            <Stars />
+                            <h5 className="price">
+                                {formatPrice(product.fields.price)}
+                            </h5>
+                            <p className="desc">{product.fields.description}</p>
+                            <p className="info">
+                                <span>Available : </span>
+                                {product.fields.stock > 0
+                                    ? "In stock"
+                                    : "out of stock"}
+                            </p>
+                            <p className="info">
+                                <span>asin : </span>
+                                {product.id}
+                            </p>
+                            <p className="info">
+                                <span>brand : </span>
+                                {product.fields.brand}
+                            </p>
+                            <hr />
+                            {product.fields.stock > 0 && <AddToCart />}
+                        </section>
+                    </div>
+                </div>
+            </Wrapper>
+        );
+    } else {
+        return null;
+    }
 };
 
 const Wrapper = styled.main`
