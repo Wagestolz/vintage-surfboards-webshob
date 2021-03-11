@@ -61,10 +61,13 @@ const SingleProductPage = () => {
                         back to products
                     </Link>
                     <div className="product-center">
-                        <ProductImages images={product.fields.image} />
+                        <ProductImages images={product.fields.images} />
                         <section className="content">
                             <h2>{product.fields.name}</h2>
-                            <Stars />
+                            <Stars
+                                stars={product.fields.stars}
+                                reviews={product.fields.reviews}
+                            />
                             <h5 className="price">
                                 {formatPrice(product.fields.price)}
                             </h5>
@@ -84,7 +87,9 @@ const SingleProductPage = () => {
                                 {product.fields.brand}
                             </p>
                             <hr />
-                            {product.fields.stock > 0 && <AddToCart />}
+                            {product.fields.stock > 0 && (
+                                <AddToCart product={product} />
+                            )}
                         </section>
                     </div>
                 </div>
@@ -102,7 +107,8 @@ const Wrapper = styled.main`
         margin-top: 2rem;
     }
     .price {
-        color: var(--clr-primary-5);
+        color: var(--hawaii-red);
+        font-weight: 600;
     }
     .desc {
         line-height: 2;

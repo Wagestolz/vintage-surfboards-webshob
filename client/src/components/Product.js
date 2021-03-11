@@ -4,11 +4,11 @@ import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Product = ({ fields, id }) => {
-    const { image, name, price } = fields;
+    const { images, name, price } = fields;
     return (
         <Wrapper>
             <div className="container">
-                <img src={image[0].url} alt={name} />
+                <img src={images[0].url} alt={name} />
                 <Link to={`/products/${id}`} className="link">
                     <FaSearch />
                 </Link>
@@ -30,8 +30,8 @@ const Wrapper = styled.article`
     img {
         width: 100%;
         display: block;
-        object-fit: contain;
-        /* object-fit: cover; */
+        /* object-fit: contain; */
+        object-fit: cover;
         border-radius: var(--radius);
         transition: var(--transition);
     }

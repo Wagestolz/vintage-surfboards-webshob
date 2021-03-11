@@ -28,435 +28,232 @@ CREATE TABLE products (
 
 INSERT INTO products (fields)
 VALUES('{
-        "name": "Pineapple Paradise",
-        "price": 32.99,
-        "image": "url": "https://s3.amazonaws.com/aloha.shop/Shirt1.png",
-        "brand": "Aloha Republic",
-        "category": "1960s"
-        "colors": ["#81E2F1", "#ECBA4D", "#85D657", "#376D31", "#F04CA8"],
-        "tags": ["pineapple", "hibiscus", "tropical"],
-        "featured": true,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-    }');
-    
-INSERT INTO products (fields)
-VALUES('{
-        "name": "Hawaiian Sunset Blue",
-        "price": 39.99,
-        "brand": "KY’s Cotton",
-        "fabric": "cotton",
-        "colors": ["#1F3895", "#101011", "#DCCF2C", "#F06307"],
-        "tags": ["palm trees", "beach", "sunset"],
-        "featured": false,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-        "image": [
-            {
-                "id": 2,
-                "url": "https://s3.amazonaws.com/aloha.shop/Shirt2.png",
-                "filename": "Shirt2.png",
-                "size": 62864,
-                "type": "image/png",
-                "thumbnails": {
-                    "small": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt2.png",
-                        "width": 56,
-                        "height": 36
-                    },
-                    "large": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt2.png",
-                        "width": 801,
-                        "height": 512
-                    },
-                    "full": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt2.png",
-                        "width": 3000,
-                        "height": 3000
-                    }
-                }
-            }
-        ]
-    }');
+   "name":"Vic Tantau",
+   "price":370000,
+   "stock":3,
+   "stars": 4.9,
+   "reviews": 12,
+   "image":"https://s3.amazonaws.com/aloha.vintage.surfboards/VICTANTAU1.jpg",
+   "colors":[
+      "#A47250",
+      "#DAC8B2"
+   ],
+   "brand":"Vic Tantau",
+   "description":"8`10 1957 Blasa Pig, Single Fin, Balsa Teak Stringer. Vic Tantau was the first shaper in Australia to use lighter weight materials. It was based on a lightweight malibu from a Californian lifesaver, who came out for the 1956 Olympic games.",
+   "category":"1960s",
+   "shipping":true,
+   "featured":true,
+   "tags":[
+      "malibu",
+      "single",
+      "stringer"
+   ],
+   "images":[
+      {
+         "id":1,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/VICTANTAU1.jpg",
+         "filename":"VICTANTAU1.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      },
+      {
+         "id":2,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/VICTANTAU2.jpg",
+         "filename":"VICTANTAU2.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      },
+      {
+         "id":3,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/VICTANTAU3.jpg",
+         "filename":"VICTANTAU3.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      },
+      {
+         "id":4,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/VICTANTAU4.jpg",
+         "filename":"VICTANTAU4.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      },
+      {
+         "id":5,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/VICTANTAU5.jpg",
+         "filename":"VICTANTAU5.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      }
+   ]
+}');
 
 INSERT INTO products (fields)
 VALUES('{
-        "name": "Hawaiian Sunset Red",
-        "price": 39.99,
-        "brand": "KY’s Cotton",
-        "fabric": "cotton",
-        "colors": ["#BE0117", "#DABE3C", "#FF681B", "#101011"],
-        "tags": ["palm trees", "beach", "sunset"],
-        "featured": false,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-        "image": [
-            {
-                "id": 3,
-                "url": "https://s3.amazonaws.com/aloha.shop/Shirt3.png",
-                "filename": "Shirt3.png",
-                "size": 62864,
-                "type": "image/png",
-                "thumbnails": {
-                    "small": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt3.png",
-                        "width": 56,
-                        "height": 36
-                    },
-                    "large": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt3.png",
-                        "width": 801,
-                        "height": 512
-                    },
-                    "full": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt3.png",
-                        "width": 3000,
-                        "height": 3000
-                    }
-                }
-            }
-        ]
-    }');
-
-
-INSERT INTO products (fields)
-VALUES('{
-        "name": "Flamingo Garden",
-        "price": 36.99,
-        "brand": "Pacific Legend",
-        "fabric": "cotton",
-        "colors": ["#51C3AA", "#B5CCB2", "#E5C559", "#FDA18C", "#435949"],
-        "tags": ["flamingos", "palm trees", "beach"],
-        "featured": true,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-        "image": [
-            {
-                "id": 4,
-                "url": "https://s3.amazonaws.com/aloha.shop/Shirt4.png",
-                "filename": "Shirt4.png",
-                "size": 62864,
-                "type": "image/png",
-                "thumbnails": {
-                    "small": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt4.png",
-                        "width": 56,
-                        "height": 36
-                    },
-                    "large": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt4.png",
-                        "width": 801,
-                        "height": 512
-                    },
-                    "full": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt4.png",
-                        "width": 3000,
-                        "height": 3000
-                    }
-                }
-            }
-        ]
-    }');
+   "name":"Ron Desmond",
+   "price":150000,
+   "stock":2,
+   "stars": 4.3,
+   "reviews": 43,
+   "image":"https://s3.amazonaws.com/aloha.vintage.surfboards/RONDESMOND1.jpg",
+   "colors":[
+      "#CF7819",
+      "#DBC194",
+      "#6D2A15"
+   ],
+   "brand":"Ron Desmond",
+   "description":"9`9 Single Fin, Longboard. One of our oldest collector board - a late 60’s transition board.",
+   "category":"1960s",
+   "shipping":true,
+   "featured":true,
+   "tags":[
+      "single",
+      "longboard",
+      "orange"
+   ],
+   "images":[
+      {
+         "id":6,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/RONDESMOND1.jpg",
+         "filename":"RONDESMOND1.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      },
+      {
+         "id":7,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/RONDESMOND2.jpg",
+         "filename":"RONDESMOND2.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      },
+      {
+         "id":8,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/RONDESMOND3.jpg",
+         "filename":"RONDESMOND3.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      }
+   ]
+}');
 
 INSERT INTO products (fields)
 VALUES('{
-        "name": "Flamingo Tropics",
-        "price": 36.99,
-        "brand": "Pacific Legend",
-        "fabric": "cotton",
-        "colors": ["#08CBD7", "#9FC06F", "#089EB6", "#DA5D6C"],
-        "tags": ["flamingos", "sea", "reed"],
-        "featured": false,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-        "image": [
-            {
-                "id": 5,
-                "url": "https://s3.amazonaws.com/aloha.shop/Shirt5.png",
-                "filename": "Shirt5.png",
-                "size": 62864,
-                "type": "image/png",
-                "thumbnails": {
-                    "small": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt5.png",
-                        "width": 56,
-                        "height": 36
-                    },
-                    "large": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt5.png",
-                        "width": 801,
-                        "height": 512
-                    },
-                    "full": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt5.png",
-                        "width": 3000,
-                        "height": 3000
-                    }
-                }
-            }
-        ]
-    }');
-
-
-INSERT INTO products (fields)
-VALUES('{
-        "name": "Oldschool Surf",
-        "price": 46.99,
-        "brand": "RJC Hawaii",
-        "fabric": "cotton",
-        "colors": ["#97BDCF", "#E7E7DA", "#D4773A", "#2E2835", "#666946"],
-        "tags": ["surfboards", "palm trees", "hibiscus"],
-        "featured": false,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-        "image": [
-            {
-                "id": 6,
-                "url": "https://s3.amazonaws.com/aloha.shop/Shirt6.png",
-                "filename": "Shirt6.png",
-                "size": 62864,
-                "type": "image/png",
-                "thumbnails": {
-                    "small": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt6.png",
-                        "width": 56,
-                        "height": 36
-                    },
-                    "large": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt6.png",
-                        "width": 801,
-                        "height": 512
-                    },
-                    "full": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt6.png",
-                        "width": 3000,
-                        "height": 3000
-                    }
-                }
-            }
-        ]
-    }');
+   "name":"McCoy Larry Blair Model",
+   "price":170000,
+   "stock":1,
+   "stars": 4.1,
+   "reviews": 102,
+   "image":"https://s3.amazonaws.com/aloha.vintage.surfboards/MCCOY1.jpg",
+   "colors":[
+      "#7EB3AF",
+      "#017CC2",
+      "#FEF7DB"
+   ],
+   "brand":"McCoy",
+   "description":"Signed by Larry Blair who won two Pipes, back to back. That put him up there with Lopez and Russell. Larry was the first Aussie to win the Pipe Masters and to win it back to back and remains the youngest ever winner of the event.",
+   "category":"1970s",
+   "shipping":true,
+   "featured":true,
+   "tags":[
+      "signature",
+      "pipe",
+      "single"
+   ],
+   "images":[
+      {
+         "id":9,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/MCCOY1.jpg",
+         "filename":"MCCOY1.jpg",
+         "size":62864,
+         "type":"image/jp"
+      },
+      {
+         "id":10,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/MCCOY2.jpg",
+         "filename":"MCCOY2.jpg",
+         "size":62864,
+         "type":"image/jp"
+      },
+      {
+         "id":11,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/MCCOY3.jpg",
+         "filename":"MCCOY3.jpg",
+         "size":62864,
+         "type":"image/jp"
+      },
+      {
+         "id":12,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/MCCOY4.jpg",
+         "filename":"MCCOY4.jpg",
+         "size":62864,
+         "type":"image/jp"
+      }
+   ]
+}');
 
 INSERT INTO products (fields)
 VALUES('{
-        "name": "Paradise Birds",
-        "price": 32.99,
-        "brand": "RJC Hawaii",
-        "fabric": "cotton",
-        "colors": ["#EEEEEF", "#F8A11D", "#CC2C27", "#2963A8", "#3C685C"],
-        "tags": ["parrots", "tropical", "cockatoos"],
-        "featured": false,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-        "image": [
-            {
-                "id": 7,
-                "url": "https://s3.amazonaws.com/aloha.shop/Shirt7.png",
-                "filename": "Shirt7.png",
-                "size": 62864,
-                "type": "image/png",
-                "thumbnails": {
-                    "small": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt7.png",
-                        "width": 56,
-                        "height": 36
-                    },
-                    "large": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt7.png",
-                        "width": 801,
-                        "height": 512
-                    },
-                    "full": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt7.png",
-                        "width": 3000,
-                        "height": 3000
-                    }
-                }
-            }
-        ]
-    }');
-
-
-INSERT INTO products (fields)
-VALUES('{
-        "name": "Parrot Legend",
-        "price": 30.99,
-        "brand": "Aloha Republic",
-        "fabric": "cotton",
-        "colors": ["#58951A", "#0C1E5C", "#EA162D" ],
-        "tags": ["parrots", "tropical", "birds"],
-        "featured": true,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-        "image": [
-            {
-                "id": 8,
-                "url": "https://s3.amazonaws.com/aloha.shop/Shirt8.png",
-                "filename": "Shirt8.png",
-                "size": 62864,
-                "type": "image/png",
-                "thumbnails": {
-                    "small": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt8.png",
-                        "width": 56,
-                        "height": 36
-                    },
-                    "large": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt8.png",
-                        "width": 801,
-                        "height": 512
-                    },
-                    "full": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt8.png",
-                        "width": 3000,
-                        "height": 3000
-                    }
-                }
-            }
-        ]
-    }');
-
-INSERT INTO products (fields)
-VALUES('{
-        "name": "Hibiscus Garden",
-        "price": 32.99,
-        "brand": "Aloha Republic",
-        "fabric": "cotton",
-        "colors": ["#DB7BAE", "#F8F2F1", "#858B45", "#D0B38A"],
-        "tags": ["hibiscus", "floral", "flowers"],
-        "featured": false,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-        "image": [
-            {
-                "id": 9,
-                "url": "https://s3.amazonaws.com/aloha.shop/Shirt9.png",
-                "filename": "Shirt9.png",
-                "size": 62864,
-                "type": "image/png",
-                "thumbnails": {
-                    "small": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt9.png",
-                        "width": 56,
-                        "height": 36
-                    },
-                    "large": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt9.png",
-                        "width": 801,
-                        "height": 512
-                    },
-                    "full": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt9.png",
-                        "width": 3000,
-                        "height": 3000
-                    }
-                }
-            }
-        ]
-    }');
-
-INSERT INTO products (fields)
-VALUES('{
-        "name": "Onomea Bay",
-        "price": 27.99,
-        "brand": "Aloha Republic",
-        "fabric": "cotton",
-        "colors": ["#B4D9E8", "#21569C", "#7B8743", "#F5F6ED"],
-        "tags": ["onomea", "floral", "flowers"],
-        "featured": false,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-        "image": [
-            {
-                "id": 10,
-                "url": "https://s3.amazonaws.com/aloha.shop/Shirt10.png",
-                "filename": "Shirt10.png",
-                "size": 62864,
-                "type": "image/png",
-                "thumbnails": {
-                    "small": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt10.png",
-                        "width": 56,
-                        "height": 36
-                    },
-                    "large": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt10.png",
-                        "width": 801,
-                        "height": 512
-                    },
-                    "full": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt10.png",
-                        "width": 3000,
-                        "height": 3000
-                    }
-                }
-            }
-        ]
-    }');
-
-
-INSERT INTO products (fields)
-VALUES('{
-        "name": "Parrot Love",
-        "price": 32.99,
-        "brand": "Aloha Republic",
-        "fabric": "cotton",
-        "colors": ["#F9BE55", "#498501", "#D3111E", "#59749B", "#7A9B00"],
-        "tags": ["parrots", "tropical", "birds"],
-        "featured": false,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-        "image": [
-            {
-                "id": 11,
-                "url": "https://s3.amazonaws.com/aloha.shop/Shirt11.png",
-                "filename": "Shirt11.png",
-                "size": 62864,
-                "type": "image/png",
-                "thumbnails": {
-                    "small": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt11.png",
-                        "width": 56,
-                        "height": 36
-                    },
-                    "large": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt11.png",
-                        "width": 801,
-                        "height": 512
-                    },
-                    "full": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt11.png",
-                        "width": 3000,
-                        "height": 3000
-                    }
-                }
-            }
-        ]
-    }');
-
-INSERT INTO products (fields)
-VALUES('{
-        "name": "Orange Island",
-        "price": 36.99,
-        "brand": "Aloha Republic",
-        "fabric": "cotton",
-        "colors": ["#FDB84A", "#EDE4BC", "#494E0E", "#73573E"],
-        "tags": ["island", "palm trees", "sunny"],
-        "featured": false,
-        "description": "100% Cotton poplin Hawaiian short-sleeve shirt with pattern-matched chest pocket. Genuine coconut shell buttons. Cool and lightweight for summer. Made in Honolulu.",
-        "image": [
-            {
-                "id": 12,
-                "url": "https://s3.amazonaws.com/aloha.shop/Shirt12.png",
-                "filename": "Shirt12.png",
-                "size": 62864,
-                "type": "image/png",
-                "thumbnails": {
-                    "small": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt12.png",
-                        "width": 56,
-                        "height": 36
-                    },
-                    "large": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt12.png",
-                        "width": 801,
-                        "height": 512
-                    },
-                    "full": {
-                        "url": "https://s3.amazonaws.com/aloha.shop/Shirt12.png",
-                        "width": 3000,
-                        "height": 3000
-                    }
-                }
-            }
-        ]
-    }');
+   "name":"Shane Double Dominator",
+   "price":250000,
+   "stock":0,
+   "stars": 4.9,
+   "reviews": 23,
+   "image":"https://s3.amazonaws.com/aloha.vintage.surfboards/SHANE1.jpg",
+   "colors":[
+      "#7EB3AF",
+      "#017CC2",
+      "#FEF7DB"
+   ],
+   "brand":"Designed by Inncy, Peter Thain",
+   "description":"Very rare - possibly a one of a kind board. 6`4 and in pre-loved condition with quite a few dings. Shaped in 76.",
+   "category":"1970s",
+   "shipping":false,
+   "featured":false,
+   "tags":[
+      "double",
+      "pipe"
+   ],
+   "images":[
+      {
+         "id":13,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/SHANE1.jpg",
+         "filename":"SHANE1.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      },
+      {
+         "id":14,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/SHANE2.jpg",
+         "filename":"SHANE2.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      },
+      {
+         "id":15,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/SHANE3.jpg",
+         "filename":"SHANE3.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      },
+      {
+         "id":16,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/SHANE4.jpg",
+         "filename":"SHANE4.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      },
+      {
+         "id":17,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/SHANE5.jpg",
+         "filename":"SHANE5.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      },
+      {
+         "id":18,
+         "url":"https://s3.amazonaws.com/aloha.vintage.surfboards/SHANE6.jpg",
+         "filename":"SHANE6.jpg",
+         "size":62864,
+         "type":"image/jpg"
+      }
+   ]
+}');
