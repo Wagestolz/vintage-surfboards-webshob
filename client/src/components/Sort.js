@@ -2,7 +2,51 @@ import { useFilterContext } from "../context/filter_context";
 import { BsFillGridFill, BsList } from "react-icons/bs";
 import styled from "styled-components";
 const Sort = () => {
-    return <h4>sort </h4>;
+    const {
+        filtered_products: products,
+        grid_view,
+        setGridView,
+        setListView,
+        sort,
+        updateSort,
+    } = useFilterContext();
+    return (
+        <Wrapper>
+            <div className="btn-container">
+                <button
+                    type="button"
+                    className={`${grid_view && "active"}`}
+                    onClick={setGridView}
+                >
+                    <BsFillGridFill />
+                </button>
+                <button
+                    type="button"
+                    className={`${!grid_view && "active"}`}
+                    onClick={setListView}
+                >
+                    <BsList />
+                </button>
+            </div>
+            <p>{products.length} products found</p>
+            <hr />
+            <form action="">
+                <label htmlFor="sort">sort by </label>
+                <select
+                    name="sort"
+                    id="sort"
+                    className="sort-input"
+                    value={sort}
+                    onChange={updateSort}
+                >
+                    <option value="price-lowest">price (lowest)</option>
+                    <option value="price-highest">price (highest)</option>
+                    <option value="name-a">name (a-z)</option>
+                    <option value="name-z">name (z-a)</option>
+                </select>
+            </form>
+        </Wrapper>
+    );
 };
 
 const Wrapper = styled.section`
@@ -36,8 +80,8 @@ const Wrapper = styled.section`
         column-gap: 0.5rem;
         button {
             background: transparent;
-            border: 1px solid var(--clr-black);
-            color: var(--clr-black);
+            border: 1px solid var(--hawaii-red);
+            color: var(--hawaii-red);
             width: 1.5rem;
             border-radius: var(--radius);
             height: 1.5rem;
@@ -50,19 +94,24 @@ const Wrapper = styled.section`
             }
         }
         .active {
-            background: var(--clr-black);
-            color: var(--clr-white);
+            background: var(--hawaii-red);
+            color: var(--hawaii-creme);
         }
     }
     .sort-input {
         border-color: transparent;
+        font-family: var(--ff-text);
+        background: var(--hawaii-red);
+        color: var(--hawaii-creme);
+        border-radius: var(--radius);
         font-size: 1rem;
         text-transform: capitalize;
-        padding: 0.25rem 0.5rem;
+        padding: 0.25rem 0.25rem;
     }
     label {
         font-size: 1rem;
         text-transform: capitalize;
+        color: var(--clr-primary-4);
     }
 `;
 
