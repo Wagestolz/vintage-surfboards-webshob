@@ -8,7 +8,7 @@ const Filters = () => {
         filters: {
             text,
             category,
-            company,
+            brand,
             color,
             min_price,
             price,
@@ -19,6 +19,11 @@ const Filters = () => {
         clearFilters,
         all_products,
     } = useFilterContext();
+
+    const categories = getUniqueValues(all_products, "category");
+    const brands = getUniqueValues(all_products, "brand");
+    const colors = getUniqueValues(all_products, "colors");
+
     return (
         <Wrapper>
             <div className="content">
@@ -39,6 +44,53 @@ const Filters = () => {
                         />
                     </div>
                     {/* end of search input */}
+                    {/* categories */}
+                    <div className="form-control">
+                        <h5>category</h5>
+                        <div>
+                            {categories.map((cat, idx) => {
+                                return (
+                                    <button
+                                        key={idx}
+                                        onClick={updateFilters}
+                                        name="category"
+                                        type="button"
+                                        value={cat}
+                                        className={
+                                            category == cat.toLowerCase() &&
+                                            "active"
+                                        }
+                                    >
+                                        {cat}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                    {/* end of categories */}
+                    {/* brands  */}
+                    <div className="form-control">
+                        <h5>brand</h5>
+                        <select
+                            name="brand"
+                            value={brand}
+                            onChange={updateFilters}
+                            className="company"
+                        >
+                            {brands.map((brd, idx) => {
+                                return (
+                                    <option
+                                        key={idx}
+                                        onClick={updateFilters}
+                                        value={brd}
+                                    >
+                                        {brd}
+                                    </option>
+                                );
+                            })}
+                        </select>
+                    </div>
+                    {/* end of brands  */}
                 </form>
             </div>
         </Wrapper>
@@ -55,6 +107,7 @@ const Wrapper = styled.section`
     .search-input {
         padding: 0.5rem;
         background: var(--clr-grey-10);
+        color: var(--clr-primary-4);
         border-radius: var(--radius);
         border-color: transparent;
         letter-spacing: var(--spacing);
@@ -71,14 +124,15 @@ const Wrapper = styled.section`
         border: none;
         border-bottom: 1px solid transparent;
         letter-spacing: var(--spacing);
-        color: var(--clr-grey-5);
+        color: var(--clr-primary-4);
         cursor: pointer;
     }
     .active {
-        border-color: var(--clr-grey-5);
+        border-color: var(--hawaii-red);
     }
     .company {
         background: var(--clr-grey-10);
+        color: var(--clr-primary-4);
         border-radius: var(--radius);
         border-color: transparent;
         padding: 0.25rem;
