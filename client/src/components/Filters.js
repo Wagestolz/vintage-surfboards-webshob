@@ -91,6 +91,48 @@ const Filters = () => {
                         </select>
                     </div>
                     {/* end of brands  */}
+                    {/* colors  */}
+                    <div className="form-control">
+                        <h5>colors</h5>
+                        <div className="colors">
+                            {colors.map((col, idx) => {
+                                if (col === "all") {
+                                    return (
+                                        <button
+                                            name="color"
+                                            onClick={updateFilters}
+                                            value="all"
+                                            className={`${
+                                                color === "all"
+                                                    ? "all-btn active"
+                                                    : "all-btn"
+                                            }`}
+                                        >
+                                            all
+                                        </button>
+                                    );
+                                }
+                                return (
+                                    <button
+                                        key={idx}
+                                        name="color"
+                                        style={{ background: col }}
+                                        className={`${
+                                            color === col
+                                                ? "color-btn active"
+                                                : "color-btn"
+                                        }`}
+                                        // data-color={col}
+                                        value={col}
+                                        onClick={updateFilters}
+                                    >
+                                        {color == col && <FaCheck />}
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    </div>
+                    {/* end of colors  */}
                 </form>
             </div>
         </Wrapper>
@@ -150,7 +192,7 @@ const Wrapper = styled.section`
         margin-right: 0.5rem;
         border: none;
         cursor: pointer;
-        opacity: 0.5;
+        opacity: 0.7;
         display: flex;
         align-items: center;
         justify-content: center;
