@@ -74,7 +74,55 @@ const filter_reducer = (state, action) => {
         };
     }
     if (action.type === FILTER_PRODUCTS) {
-        return { ...state };
+        const { all_products } = state;
+        const { text, category, brand, color, price, shipping } = state.filters;
+        let tempProducts = [...all_products];
+        // filtering:
+        if (text) {
+            tempProducts = tempProducts.filter((product) => {
+                return product.fields.name.toLowerCase().startsWith(text);
+            });
+        }
+        if (category != "all") {
+            tempProducts = tempProducts.filter((product) => {
+                return product.fields.category == category;
+            });
+        }
+        if (brand != "all") {
+            tempProducts = tempProducts.filter((product) => {
+                return product.fields.brand == brand;
+            });
+        }
+        if (color != "all") {
+            tempProducts = tempProducts.filter((product) => {
+                return product.fields.colors.find((col) => {
+                    return col == color;
+                });
+            });
+        }
+        if (shipping) {
+            tempProducts = tempProducts.filter((product) => {
+                return product.fields.shipping;
+            });
+        }
+        tempProducts = tempProducts.filter((product) => {
+            return product.fields.price <= price;
+        });
+        return { ...state, filtered_products: tempProducts };
+    }
+    if (action.type === CLEAR_FILTERS) {
+        return {
+            ...state,
+            filters: {
+                ...state.filters,
+                text: "",
+                brand: "all",
+                category: "all",
+                price: state.filters.max_price,
+                color: "all",
+                shipping: false,
+            },
+        };
     }
     throw new Error(`No Matching "${action.type}" - action type`);
 };

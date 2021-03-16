@@ -133,7 +133,40 @@ const Filters = () => {
                         </div>
                     </div>
                     {/* end of colors  */}
+                    {/* price  */}
+                    <div className="form-control">
+                        <h5>price</h5>
+                        <p className="price">{formatPrice(price)}</p>
+                        <input
+                            type="range"
+                            name="price"
+                            onChange={updateFilters}
+                            value={price}
+                            min={min_price}
+                            max={max_price}
+                        />
+                    </div>
+                    {/* end of price  */}
+                    {/* shipping  */}
+                    <div className="form-control shipping">
+                        <label htmlFor="shipping">free shipping</label>
+                        <input
+                            type="checkbox"
+                            name="shipping"
+                            id="shipping"
+                            onChange={updateFilters}
+                            checked={shipping}
+                        />
+                    </div>
+                    {/* end of shipping  */}
                 </form>
+                <button
+                    type="button"
+                    className="clear-btn"
+                    onClick={clearFilters}
+                >
+                    clear filters
+                </button>
             </div>
         </Wrapper>
     );
@@ -217,6 +250,9 @@ const Wrapper = styled.section`
     .price {
         margin-bottom: 0.25rem;
     }
+    label {
+        color: var(--clr-primary-4);
+    }
     .shipping {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -226,7 +262,7 @@ const Wrapper = styled.section`
         font-size: 1rem;
     }
     .clear-btn {
-        background: var(--clr-red-dark);
+        background: var(--hawaii-red);
         color: var(--clr-white);
         padding: 0.25rem 0.5rem;
         border-radius: var(--radius);
